@@ -241,7 +241,7 @@ namespace clutils
      *  \tparam nSize the number of test repetitions.
      *  \tparam rep the type of the values the class stores and returns.
      */
-    template <uint nSize, typename rep = double>
+    template <unsigned int nSize, typename rep = double>
     class ProfilingInfo
     {
     public:
