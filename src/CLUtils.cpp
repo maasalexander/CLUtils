@@ -212,7 +212,7 @@ namespace clutils
             for (auto &fName : kernel_filenames)
             {
                 std::cerr << "Loading kernel file: " << fName<<std::endl;
-                programSource.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+                //programSource.exceptions (std::ifstream::failbit | std::ifstream::badbit);
                 std::cerr << "1"<<std::endl;
                 programSource.open (fName);
                 std::cerr << "2"<<std::endl;
