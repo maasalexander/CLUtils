@@ -212,9 +212,12 @@ namespace clutils
             for (auto &fName : kernel_filenames)
             {
                 std::cerr << "Loading kernel file: " << fName<<std::endl;
-                programSource.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+                //programSource.exceptions (std::ifstream::failbit | std::ifstream::badbit);
                 std::cerr << "1"<<std::endl;
                 programSource.open (fName);
+                if (!programSource.is_open())
+                    std::cerr <<"error while opening file"<<std::endl;
+                
                 std::cerr << "2"<<std::endl;
                 sourceCodes.emplace_back (std::istreambuf_iterator<char> (programSource), 
                                          (std::istreambuf_iterator<char> ()));
