@@ -215,9 +215,12 @@ namespace clutils
                 programSource.exceptions (std::ifstream::failbit | std::ifstream::badbit);
                 std::cerr << "1"<<std::endl;
                 programSource.open (fName);
+                std::cerr << "2"<<std::endl;
                 sourceCodes.emplace_back (std::istreambuf_iterator<char> (programSource), 
                                          (std::istreambuf_iterator<char> ()));
+                std::cerr << "3"<<std::endl;
                 programSource.close ();
+                std::cerr << "4"<<std::endl;
             }
         }
         catch (std::ifstream::failure &error)
