@@ -227,6 +227,9 @@ namespace clutils
         {
             std::cerr << "Error when accessing kernel file: " << error.what () 
                       << " (" << __FILE__ << ":" << __LINE__ << ")" << std::endl;
+            
+            int a;
+            std::cin>>a;
             exit (EXIT_FAILURE);
         }
     }
