@@ -209,7 +209,7 @@ namespace clutils
 
         try
         {
-            cout<<"Test";
+            std::cerr<<"Test";
             for (auto &fName : kernel_filenames)
             {
                 std::cout << "Loading kernel file: " << fName; 
